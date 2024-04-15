@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body,html{
+  background-color: rgb(14, 14, 14);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ 
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  width: 100vw;
 }
 
-.App-link {
-  color: #61dafb;
+.container{
+background: rgb(255, 255, 255);
+padding: 2rem;
+border-radius: 50px;
+height: auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: start;
+
+overflow: scroll;
+}
+.todolists{
+  width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+gap: 0.2rem;
+min-height: 100px;
+max-height: 400px;
+overflow-y: scroll;
+overflow-x: hidden;
+}
+.todolist{
+  background: rgb(50, 50, 50);
+  width: 100%;
+border-radius: 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px;
+margin: 5px;
+color: rgb(255, 255, 255);
+cursor: pointer;
+}
+.buttonSetion{
+  display: flex;
+  gap: 0.3rem;
+}
+.buttonSetion button{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+ }
+ .deleteButton{
+  color:rgb(255, 0, 0);
+ }
+ .completeButton{
+  color: rgb(0, 255, 0);
+ }
+
+ .inputBox{
+width: 100%;
+border: 2px solid gray;
+
+border-radius: 5px;
+margin-top: 20px ;
+overflow: hidden;
+ }
+ .inputBox input{
+width: 74%;
+height: 100%;
+padding-left: 20px;
+border: none;
+ }
+
+ .inputBox input:focus {
+  outline: none; 
+  border: none; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inputBox button{
+  border: none;
+  background: rgb(0, 157, 255);
+  padding: 6px;
+  height: 100%;
+  width: 26%;
 }
